@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="formBlock">
+    <div class="formContainer">
+      <div class="wrapperAndForm">
+        <div id="coordinatePanelWrapper">
+          <div class="coordinatePanel"
+               style="width: 400px; height: 400px; display: block; margin-left: auto; margin-right: auto">
+            <!--                  <h2>График R({{ showR }})</h2>-->
+            <br/>
+            <div class="coordinate_img">
+              <canvas #canvasElement width="400" height="400" (click)="onCanvasClick($event)"></canvas>
+            </div>
+          </div>
+        </div>
+        <form>
+          <div class="input-field">
+            <label for="xValue">Choose X:</label>
+            <select id="xValue" name="xValue" [(ngModel)]="selectedX" required>
+              <option *ngFor="let x of xValues" [value]="x">{{ x }}</option>
+            </select>
+          </div>
+          <div class="input-field">
+            <label for="yValue">Enter Y:</label>
+            <input type="number" id="yValue" name="yValue" [(ngModel)]="selectedY" min="-5" max="5" required>
+          </div>
+          <div class="input-field">
+            <label for="rValue">Choose R:</label>
+            <select id="rValue" name="rValue" [(ngModel)]="selectedR" required>
+              <option *ngFor="let r of rValues" [value]="r">{{ r }}</option>
+            </select>
+          </div>
+          <div class="button-container">
+            <button class="button_submit" type="submit" [disabled]="!formValid">Submit</button>
+          </div>
+          <div *ngIf="invalidInput" class="error-message">Invalid input. Please check your values.</div>
+        </form>
+      </div>
+      <div class="button-container">
+        <button class="button_submit" (click)="clearCanvas()">Clear Canvas</button>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div id="resultTable">
+    <div id="button-container">
+      <button class="button_submit" (click)="logOut()">Logout</button>
+      <button class="button_submit" (click)="clearModel()">Clear</button>
+    </div>
+    <table id="table">
+      <thead>
+      <tr>
+        <th>Result</th>
+        <th>X</th>
+        <th>Y</th>
+        <th>R</th>
+        <th>Current Time</th>
+      </tr>
+      </thead>
+      <!--      <tbody>-->
+      <!--      <tr *ngFor="let el of modelList">-->
+      <!--        <td>{{ el.result }}</td>-->
+      <!--        <td>{{ el.x }}</td>-->
+      <!--        <td>{{ el.y }}</td>-->
+      <!--        <td>{{ el.r }}</td>-->
+      <!--        <td>{{ el.time }}</td>-->
+      <!--        <td>{{ el.scriptTime }}</td>-->
+      <!--      </tr>-->
+      <!--      </tbody>-->
+    </table>
+  </div>
+</div>

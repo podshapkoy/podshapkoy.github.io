@@ -1,0 +1,24 @@
+.top-bar {
+  background-color: #985146;
+  padding: 20px 0;
+  color: #FEECEF;
+}
+
+.top-bar a {
+  transition: color 0.5s ease, font-size 0.5s ease;
+}
+
+.top-bar a:hover {
+  color: rgba(255, 222, 0, 0.5);
+  font-size: 92%;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}

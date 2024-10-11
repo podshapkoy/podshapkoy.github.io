@@ -1,0 +1,55 @@
+.clock {
+  color: #691414;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container-gif {
+  text-align: center;
+  margin-top: 20px;
+}
+.container {
+  max-width: 90%;
+  margin: 30px auto;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: #FEECEF;
+  border-radius: 20px;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+}
+.container p {
+  font-size: 200%;
+  text-align: center;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 20px;
+}
+.button_submit {
+  font-size: 200%;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.button_submit:last-child {
+  margin-right: 0;
+}
+
+.button_submit:hover {
+  background-color: #5d312a;
+}

@@ -1,0 +1,24 @@
+  <div class="button-container">
+    <button class="button_submit" routerLink="/">Назад</button>
+  </div>
+  <div class="formBlock">
+    <div class="formContainer">
+      <h2>Вход в аккаунт</h2>
+      <form id="loginForm">
+        <label for="loginNew">Login:</label>
+        <input type="text" id="loginNew" name="login" required [(ngModel)]="dataLogin.username" (input)="checkInput()">
+        <br/>
+        <label for="passwordNew">Password:</label>
+        <input type="password" id="passwordNew" name="password" required [(ngModel)]="dataLogin.password"
+               (input)="checkInput()">
+        <br/>
+        <div class="button-container">
+          <button class="button_submit" type="submit" (click)="tryLogin()">Submit</button>
+        </div>
+        <div id="message-box" *ngIf="isTextVisible">
+          <p>{{ errorMessage }}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+

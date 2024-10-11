@@ -1,0 +1,24 @@
+<div class="button-container">
+  <button class="button_submit" routerLink="/">Назад</button>
+</div>
+<div class="formBlock">
+  <div class="formContainer">
+    <h2 style="color: black;">Регистрация</h2>
+    <form id="registerForm">
+      <label for="loginNew">Login:</label>
+      <input type="text" id="loginNew" name="login" required [(ngModel)]="dataRegister.username" (input)="checkInput()">
+      <br/>
+      <label for="passwordNew">Password:</label>
+      <input type="password" id="passwordNew" name="password" required [(ngModel)]="dataRegister.password"
+             (input)="checkInput()">
+      <br/>
+      <div class="button-container">
+        <button class="button_submit" type="submit" (click)="tryRegistration()">Submit</button>
+      </div>
+
+      <div id="error" *ngIf="isTextVisible">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </form>
+  </div>
+</div>

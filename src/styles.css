@@ -1,0 +1,15 @@
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Montserrat Thin', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #EBA7B3;
+  color: #985146;
+}
+
+button.p-element.p-ripple.p-autocomplete-dropdown.p-button-icon-only.p-button.p-component.ng-star-inserted{
+  background: #e42575;
+  border-color: #e42575;
+}
